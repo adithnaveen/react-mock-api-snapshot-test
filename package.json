@@ -2,6 +2,7 @@
   "name": "mock-api-snapshot-tests",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
@@ -10,16 +11,21 @@
     "@types/node": "^16.11.27",
     "@types/react": "^18.0.5",
     "@types/react-dom": "^18.0.1",
+    "axios": "^0.26.1",
+    "jest": "^27.5.1",
+    "jest-styled-components": "^7.0.8",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.1",
+    "react-test-renderer": "^18.0.0",
+    "styled-components": "^5.3.5",
     "typescript": "^4.6.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,5 +45,41 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "jest-environment-jsdom",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsconfig": "tsconfig.json"
+      },
+      "window": {}
+    },
+    "testMatch": [
+      "**/__tests__/**/*.[jt]s?(x)"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less|scss|svg)$": "identity-obj-proxy"
+    },
+    "transform": {
+      "\\.tsx?$": "ts-jest",
+      "\\.jsx?$": "babel-jest"
+    },
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.ts"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-test-renderer": "^18.0.0",
+    "@types/styled-components": "^5.1.25",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.2",
+    "ts-jest": "^27.1.4"
   }
 }

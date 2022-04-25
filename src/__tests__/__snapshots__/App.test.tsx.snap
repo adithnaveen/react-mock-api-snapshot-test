@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component it works 1`] = `
+<div
+  className="App"
+>
+  <table
+    className="sc-bczRLJ cZNNyj"
+  >
+    <tr>
+      <th
+        className="sc-gsnTZi dnOtss"
+      >
+        Name
+      </th>
+      <th
+        className="sc-gsnTZi dnOtss"
+      >
+        Surname
+      </th>
+      <th
+        className="sc-gsnTZi dnOtss"
+      >
+        Email
+      </th>
+    </tr>
+    <tr>
+      <td>
+        a fake name
+      </td>
+      <td>
+        fake surname
+      </td>
+      <td>
+        fake@email.com
+      </td>
+    </tr>
+    <tr>
+      <td>
+        a fake name 2
+      </td>
+      <td>
+        fake surname 2
+      </td>
+      <td>
+        fake@email.com
+      </td>
+    </tr>
+  </table>
+</div>
+`;
