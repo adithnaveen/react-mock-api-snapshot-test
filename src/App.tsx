@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import TableList from './TableList'
 import './App.css'
 import axios from 'axios'
@@ -8,7 +8,7 @@ function App() {
 
   React.useEffect(() => {
     axios
-      .get(`https://mockapiID.mockapi.io/users`)
+      .get(`https://jsonplaceholder.typicode.com/users`)
       .then((res) => {
         setUsers(res.data)
       })

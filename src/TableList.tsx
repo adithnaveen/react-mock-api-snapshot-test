@@ -9,32 +9,32 @@ border-bottom: 1px solid black;
 `
 
 interface TableRow {
-    name: string
-    surname: string
-    email: string
+  name: string
+  username: string
+  email: string
 }
 
 const TableList: React.FC<{
-    data: TableRow[]
-  }> = ({ data }) => {
-    return (
-        <StyledTable>
-        <tr>
-          <StyledTh>Name</StyledTh>
-          <StyledTh>Surname</StyledTh>
-          <StyledTh>Email</StyledTh>
-        </tr>
-        {data.map((val, key) => {
-          return (
-            <tr key={key}>
-              <td>{val.name}</td>
-              <td>{val.surname}</td>
-              <td>{val.email}</td>
-            </tr>
-          )
-        })}
-      </StyledTable>
-    )
-  }
-  
-  export default TableList
+  data: TableRow[]
+}> = ({ data }) => {
+  return (
+    <StyledTable>
+      <tr>
+        <StyledTh>Name</StyledTh>
+        <StyledTh>Username</StyledTh>
+        <StyledTh>Email</StyledTh>
+      </tr>
+      {data.map((val, key) => {
+        return (
+          <tr key={key}>
+            <td>{val.name}</td>
+            <td>{val.username}</td>
+            <td>{val.email}</td>
+          </tr>
+        )
+      })}
+    </StyledTable>
+  )
+}
+
+export default TableList
